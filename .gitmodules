@@ -1,0 +1,3 @@
+[submodule "PyKMIP"]
+	path = PyKMIP
+	url = https://github.com/OpenKMIP/PyKMIP.git
