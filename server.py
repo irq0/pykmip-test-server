@@ -81,7 +81,7 @@ def main():
         credentials = []
         if req.request_header.authentication is not None:
             credentials = req.request_header.authentication.credentials
-        return "anon", "anon"
+        return "anon", None
 
     from kmip.services.server.session import KmipSession
 
@@ -100,6 +100,7 @@ def main():
         enable_tls_client_auth=False,
         logging_level="DEBUG",
         database_path="pykmip.db",
+        policy_path="./policies/",
     )
     with server:
         server.serve()
